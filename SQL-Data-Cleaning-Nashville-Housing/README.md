@@ -18,10 +18,10 @@ The goal is to transform raw housing data into a clean, structured format ready 
 
 ##  Dataset
 - **Source**: Kaggle (https://www.kaggle.com/datasets/bvanntruong/housing-sql-project)
-- **File**: `NashvilleHousing.xlsx`
+- **File**: Nashville Housing Data for Data Cleaning.csv
 
 ##  Data Cleaning Steps
-1. Identified and removed duplicate records using `ROW_NUMBER()`
+1. Identified and removed duplicate records using "ROW_NUMBER()"
 2. Standardized date formats
 3. Split property address into:
    - Address
@@ -31,8 +31,8 @@ The goal is to transform raw housing data into a clean, structured format ready 
 5. Handled NULL and missing values
 
 ##  Key SQL Techniques Used
-- `ROW_NUMBER() OVER(PARTITION BY ...)`
-- `SUBSTRING()` and `CHARINDEX()`
-- `CASE WHEN`
-- `CTE (Common Table Expressions)`
+- "ROW_NUMBER() OVER(PARTITION BY ...)"
+- "SUBSTRING()" and "CHARINDEX()"
+- "CASE WHEN"
+- "CTE (Common Table Expressions)"
 
