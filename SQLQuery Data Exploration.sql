@@ -4,16 +4,16 @@ where continent is not null
 order by 3,4 
 
 
---s�lection les donn�es qui on va utiliser 
+--sélection les données qui on va utiliser 
 
 select location, date, total_cases, new_cases, total_deaths, population
 from [Portofilio Project ]..CovidDeaths
 where continent is not null
 order by 1,2
 
-          --correction des types de donn�es 
+          --correction des types de données 
 
--- 1. D'abord, on s'assure que les dates vides sont bien NULL (s�curit�)
+-- 1. D'abord, on s'assure que les dates vides sont bien NULL 
 UPDATE [Portofilio Project ]..CovidDeaths 
 SET date = NULL 
 WHERE date = '';
@@ -22,7 +22,7 @@ WHERE date = '';
 ALTER TABLE [Portofilio Project ]..CovidDeaths 
 ALTER COLUMN date DATE;
 
--- A. Nettoyage des donn�es (Remplacer le vide '' par NULL)
+-- A. Nettoyage des données (Remplacer le vide '' par NULL)
 UPDATE [Portofilio Project ]..CovidDeaths SET total_cases = NULL WHERE total_cases = '';
 UPDATE [Portofilio Project ]..CovidDeaths SET new_cases = NULL WHERE new_cases = '';
 UPDATE [Portofilio Project ]..CovidDeaths SET total_deaths = NULL WHERE total_deaths = '';
@@ -36,7 +36,7 @@ ALTER TABLE [Portofilio Project ]..CovidDeaths ALTER COLUMN total_deaths FLOAT;
 ALTER TABLE [Portofilio Project ]..CovidDeaths ALTER COLUMN new_deaths FLOAT;
 ALTER TABLE [Portofilio Project ]..CovidDeaths ALTER COLUMN population FLOAT;
 
---Groupe A : Les colonnes "Smoothed" (Moyennes liss�es)
+--Groupe A : Les colonnes "Smoothed" 
 -- 1. Nettoyage (Remplacer le vide par NULL)
 UPDATE [Portofilio Project ]..CovidDeaths SET new_cases_smoothed = NULL WHERE new_cases_smoothed = '';
 UPDATE [Portofilio Project ]..CovidDeaths SET new_deaths_smoothed = NULL WHERE new_deaths_smoothed = '';
@@ -51,7 +51,7 @@ UPDATE [Portofilio Project ]..CovidDeaths SET total_deaths_per_million = NULL WH
 UPDATE [Portofilio Project ]..CovidDeaths SET new_deaths_per_million = NULL WHERE new_deaths_per_million = '';
 
 
--- chercher 'deathpourcentage'  total cases vs total deaths(tr�s important)
+-- chercher 'deathpourcentage'  total cases vs total deaths(trés important)
 
 select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as Deathpercentage
 from [Portofilio Project ]..CovidDeaths
@@ -208,4 +208,5 @@ where dea.continent is not null
 --order by 2,3
 
 select *
+
 from PercentPopulationVaccinated
