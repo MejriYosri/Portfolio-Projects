@@ -40,4 +40,9 @@ The goal is to transform raw housing data into a clean, structured format ready 
 - "SUBSTRING()" and "CHARINDEX()"
 - "CASE WHEN"
 - "CTE (Common Table Expressions)"
+---
+
+##  Author
+**Yosri Mejri**  
+Data Analyst | Business Analyst 
 
