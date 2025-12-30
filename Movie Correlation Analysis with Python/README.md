@@ -25,7 +25,7 @@ a movie’s financial success.
 
 ##  Dataset
 - **Source**: Public movie dataset (used for learning and analysis)
-- **File**: `movies.csv`
+- **File**: `movie Data.csv`
 - **Data Type**: Movie metadata including budget, gross revenue, ratings, votes, runtime, and company
 ---
 
